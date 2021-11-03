@@ -1,0 +1,11 @@
+<!-- (click)="setHabilitar() invoca el metodo setHabilitar al hacer clic -->
+<button type="button" (click)="setHabilitar()" class="btn btn-primary my-3">{{habilitar == true?'Ocultar':'Mostar'}}</button>
+<div class="card">
+    <div class="card-header">Listado de Cursos</div>
+    <!-- *ngif me permite tener un condicional -->
+    <ul class="list-group" *ngIf='habilitar == true'> 
+        <!-- Vamos a Iterar sobre los elementos de un arreglo-->
+        <!-- *ngFor me permite recorrer un arreglo -->
+        <li class="list-group-item" *ngFor="let curso of listaCurso">{{ curso }}</li>
+    </ul>
+</div>
